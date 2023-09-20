@@ -24,7 +24,7 @@ namespace backendapi
             //        };
             //    });
 
-
+            builder.Services.AddTransient<BlobStorageService>();
 
 
            //Add services to the container.

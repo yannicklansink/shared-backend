@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\backendapi.csproj": {}
+    "C:\\WORK\\case-azure\\shared-backend\\backendapi\\backendapi.csproj": {}
   },
   "projects": {
-    "D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\backendapi.csproj": {
+    "C:\\WORK\\case-azure\\shared-backend\\backendapi\\backendapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\backendapi.csproj",
+        "projectUniqueName": "C:\\WORK\\case-azure\\shared-backend\\backendapi\\backendapi.csproj",
         "projectName": "backendapi",
-        "projectPath": "D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\backendapi.csproj",
-        "packagesPath": "C:\\Users\\yanni\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\obj\\",
+        "projectPath": "C:\\WORK\\case-azure\\shared-backend\\backendapi\\backendapi.csproj",
+        "packagesPath": "C:\\Users\\bergm53\\.nuget\\packages\\",
+        "outputPath": "C:\\WORK\\case-azure\\shared-backend\\backendapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bergm53\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.10.1, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.18.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.11, )"

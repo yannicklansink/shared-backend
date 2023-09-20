@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Azure.Identity;
+using Azure.Storage;
+using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
 
 namespace backendapi.Controllers
 {
@@ -10,10 +14,12 @@ namespace backendapi.Controllers
     {
 
         private readonly ILogger<UserController> _logger;
+        private BlobStorageService _blobStorageService;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(ILogger<UserController> logger, BlobStorageService blobService)
         {
             _logger = logger;
+            _blobStorageService = blobService;
         }
 
         //[Authorize]
@@ -27,14 +33,12 @@ namespace backendapi.Controllers
             Console.WriteLine($"License Plate: {userForm.LicensePlate}");
             if (userForm.Picture != null)
             {
-    
-                Console.WriteLine($"Picture Length: {userForm.Picture.Length}");
+                await _blobStorageService.UploadImage(userForm.Picture);
+                
             } else
             {
                 Console.WriteLine("picture is null");
-            }
-            // Set picture in container with blob storage to set picture in.
-
+            }            
 
             return Ok(new { message = "Data received" });
         }
