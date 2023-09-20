@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="APIBackendmartyannick" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\dev\\azure\\Case-opdrachten\\website-mart-yannick-azure\\backendapi\\backendapi\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
